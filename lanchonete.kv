@@ -2,7 +2,7 @@
     orientation: 'vertical'
     canvas.before:
         Color:
-            rgb: 1, 1, 1  # Cor branca
+            rgb: 1, 1, 1 
         Rectangle:
             pos: self.pos
             size: self.size
@@ -12,53 +12,53 @@
         Label:
             text: 'Lanchonete dos Cria'
             font_size: '24sp'
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1  
     BoxLayout:
         size_hint_y: None
         height: '60dp'
         Label:
             text: 'Selecione o que vai querer no seu sanduba'
             font_size: '18sp'
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1
     GridLayout:
         cols: 2
         padding: 10
         spacing: 10
         CheckBox:
             id: salada
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1 
             on_active: root.adicionar_item(1, self.active, 'salada')
         Label:
             text: 'Salada'
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1 
         CheckBox:
             id: tomate
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1 
             on_active: root.adicionar_item(1, self.active, 'tomate')
         Label:
             text: 'Tomate'
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1  
         CheckBox:
             id: maionese
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1 
             on_active: root.adicionar_item(1, self.active, 'maionese')
         Label:
             text: 'Maionese'
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1 
         CheckBox:
             id: katchup
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1 
             on_active: root.adicionar_item(1, self.active, 'katchup')
         Label:
             text: 'Katchup'
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1 
         CheckBox:
             id: hamburguer
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1 
             on_active: root.adicionar_item(3, self.active, 'hamburguer')
         Label:
             text: 'Hamburguer'
-            color: 0, 0, 0, 1  # Cor preta
+            color: 0, 0, 0, 1  
     Spinner:
         id : spinner_pagamento
         text : 'Forma de pagamento'
@@ -67,14 +67,14 @@
     Label:
         text: '* preco minimo é de R$: 3,00 (valor do pão)'
         font_size: '12sp'
-        color: 0, 0, 0, 0.5  # Cor preta
+        color: 0, 0, 0, 0.5 
     Label:
         text_size : self.size[0], None 
         font_size: '24sp'
         halign : 'center' 
         valign : 'middle' 
         text : 'Total a pagar R$' + str(root.total) + ",00"
-        color: 0, 0, 0, 1  # Cor preta
+        color: 0, 0, 0, 1 
     Button:
         text : 'Comprar'
         on_press :
