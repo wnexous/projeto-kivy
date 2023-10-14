@@ -22,7 +22,7 @@ class Lanchonete(BoxLayout):
     def show_popup(self):
         forma_pagamento = self.ids.spinner_pagamento.text
         popup = Popup(title='Compra realizada!', content=Label(text='Seu pedido foi realizado com sucesso!\nOs itens do seu sanduíche são: \n\n' + '\n'.join(
-            self.itens) + '\n\nForma de pagamento escolhida foi: ' + forma_pagamento), size_hint=(None, None), size=(400, 400))
+            self.itens) + '\n\nForma de pagamento escolhida foi: ' + forma_pagamento + f"\n\nVALOR TOTAL: {self.total},00"), size_hint=(None, None), size=(400, 400))
         popup.open()
         self.itens = []
 
