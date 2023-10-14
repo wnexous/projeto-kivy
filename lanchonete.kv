@@ -18,30 +18,35 @@
         padding: 10
         spacing: 10
         CheckBox:
+            id: salada
             color: 0, 0, 0, 1  # Cor preta
             on_active: root.adicionar_item(1, self.active)
         Label:
             text: 'Salada'
             color: 0, 0, 0, 1  # Cor preta
         CheckBox:
+            id: tomate
             color: 0, 0, 0, 1  # Cor preta
             on_active: root.adicionar_item(1, self.active)
         Label:
             text: 'Tomate'
             color: 0, 0, 0, 1  # Cor preta
         CheckBox:
+            id: maionese
             color: 0, 0, 0, 1   # Cor preta
             on_active: root.adicionar_item(1, self.active)
         Label:
             text: 'Maionese'
             color: 0, 0, 0, 1   # Cor preta
         CheckBox:
+            id: katchup
             color: 0, 0, 0, 1   # Cor preta
             on_active: root.adicionar_item(1, self.active)
         Label:
             text: 'Katchup'
             color: 0, 0, 0, 1   # Cor preta
         CheckBox:
+            id: hamburguer
             color: 0, 0, 0, 1   # Cor preta
             on_active: root.adicionar_item(3, self.active)
         Label:
@@ -56,3 +61,8 @@
         halign:'right' 
         valign:'middle' 
         text:'Total a pagar R$' + str(root.total)
+        color : (0.5 , .5 , .5 , .5) 
+    Button:
+        text:'Comprar'
+        on_press:
+            app.root.ids.salada.active = False; app.root.ids.tomate.active = False; app.root.ids.maionese.active = False; app.root.ids.katchup.active = False; app.root.ids.hamburguer.active = False; root.total =3; app.root.show_popup()
